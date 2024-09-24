@@ -2,6 +2,6 @@
 @import './vendor.css';
 @import './styles.css';
 
-
-
-
+html {
+    scroll-behavior: smooth;
+}

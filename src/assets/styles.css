@@ -1915,7 +1915,7 @@ img,
 /* ------------------------------------------------------------------- 
  * ## page loaded
  * ------------------------------------------------------------------- */
-.ss-loaded #preloader {
+/* .ss-loaded #preloader {
     opacity   : 0;
     visibility: hidden;
     transition: all 0.6s 0.9s ease-in-out;
@@ -1924,7 +1924,7 @@ img,
 .ss-loaded #preloader #loader {
     opacity   : 0;
     transition: opacity 0.6s ease-in-out;
-}
+} */
 
 
 /* ===================================================================
@@ -3049,9 +3049,10 @@ td:last-child {
     background-color: transparent;
     height          : var(--header-height);
     width           : 100%;
-    position        : absolute;
+    /* position        : absolute; */
     top             : min(var(--vspace-0_75), 4vh);
     left            : 0;
+    position        : fixed;
 }
 
 .s-header.offset {
@@ -3131,6 +3132,10 @@ td:last-child {
  * -------------------------------------------------------------------- */
 .s-header__nav {
     margin-left: var(--vspace-1);
+}
+
+.s-header__nav .smoothscroll {
+    text-transform: capitalize;
 }
 
 .s-header__menu-links {
@@ -3284,7 +3289,7 @@ td:last-child {
         padding-left    : calc(var(--gutter) * 2);
         padding-bottom  : var(--vspace-1_5);
         margin          : 0;
-        position        : absolute;
+        /* position        : absolute; */
         top             : 0;
         left            : 0;
     }
@@ -3600,10 +3605,10 @@ td:last-child {
 .s-intro__btn-download,
 .s-intro__social,
 .s-intro__scroll-down {
-    transition-timing-function: cubic-bezier(0.28, 0.12, 0.22, 1);
+    /* transition-timing-function: cubic-bezier(0.28, 0.12, 0.22, 1);
     transition-duration       : 0.6s;
     transition-delay          : 0s;
-    opacity                   : 0;
+    opacity                   : 0; */
 }
 
 .s-header__inner,
@@ -3614,19 +3619,19 @@ td:last-child {
 }
 
 .s-intro__content-pretitle {
-    transition-property: opacity, transform;
-    transform          : translate(0.2em, 150px);
+    /* transition-property: opacity, transform; */
+    /* transform          : translate(0.2em, 150px); */
 }
 
 .s-intro__content-title,
 .s-intro__content-btns {
-    transition-property: opacity, transform;
-    transform          : translateY(150px);
+    /* transition-property: opacity, transform; */
+    /* transform          : translateY(150px); */
 }
 
 .s-intro__btn-download {
-    transition-property: opacity, transform;
-    transform          : translateX(-150px);
+    /* transition-property: opacity, transform; */
+    /* transform          : translateX(-150px); */
 }
 
 .no-js .s-header__inner,
@@ -4368,6 +4373,8 @@ td:last-child {
 .ss-go-top svg path {
     fill: white;
 }
+
+
 
 /* ------------------------------------------------------------------- 
  * responsive:
