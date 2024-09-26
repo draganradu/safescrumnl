@@ -11,6 +11,11 @@ export const useCounterStore = defineStore('counter', () => {
     work: {},
     contact: {},
   }
+  const socialMedia = {
+    linkedin: 'https://www.linkedin.com/in/radu-aurel-dragan-0a894172/',
+    git: 'v',
+    instagram: 'c',
+  }
 
   const section = () => { return Object.keys(sections)};
   const currentSection = ref(0)
@@ -23,5 +28,5 @@ export const useCounterStore = defineStore('counter', () => {
 
 
 
-  return { sections, section, currentSection }
+  return { sections, section, currentSection, socialMedia }
 })
