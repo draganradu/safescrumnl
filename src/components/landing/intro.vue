@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { useCounterStore } from '../../stores/landing'
-import BootstrapIcon from 'BootstrapIcon'
+
 const store = useCounterStore()
 
 const { title } = store.sections.intro
 const { socialMedia } = store
+
 </script>
+
 <template>
   <!-- # intro
         ================================================== -->
@@ -32,7 +34,7 @@ const { socialMedia } = store
 
     <ul class="s-intro__social social-list text-white">
       <li v-for="i, k in socialMedia" :key="k">
-        <a class="smoothscroll" :href="`#${i}`">
+        <a class="smoothscroll" :href="`${i}`">
           <i class="text-white" :class="['bi', `bi-${k}`]"></i>
         </a>
       </li>
