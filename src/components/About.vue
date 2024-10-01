@@ -1,6 +1,6 @@
-<script setup>
+<script setup lang="ts">
 import { useCounterStore } from '@/stores/landing';
-
+const { count } = defineProps(['count'])
 const store = useCounterStore();
 
 </script>
@@ -11,7 +11,7 @@ const store = useCounterStore();
     <div class="row s-about__content">
       <div class="column xl-12">
 
-        <div class="section-header" data-num="01">
+        <div class="section-header" :data-num="`0${count}`">
           <h2 class="text-display-title">About Me.</h2>
         </div> <!-- end section-header -->
 
@@ -59,19 +59,8 @@ const store = useCounterStore();
             </ul>
           </div> <!--end s-about__block -->
 
-          <div class="grid-list-items__item s-about__block">
-            <h4 class="s-about__block-title">Awards</h4>
 
-            <ul class="s-about__list">
-              <li v-for="i in store.sections.about.awards" :key="i.where">
-                <a href="#0">
-                  {{ i.where }}
-                  <span>{{ i.what }}</span>
-                </a>
-              </li>
-
-            </ul>
-          </div> <!--end s-about__block -->
+          <!--end s-about__block -->
 
           <div class="grid-list-items__item s-about__block">
             <h4 class="s-about__block-title">Skills</h4>
@@ -82,6 +71,20 @@ const store = useCounterStore();
               </li>
             </ul>
           </div> <!--end s-about__block -->
+
+          <div class="grid-list-items__item s-about__block">
+            <h4 class="s-about__block-title">Specialty</h4>
+
+            <ul class="s-about__list">
+              <li v-for="i in store.sections.about.services" :key="i.title">
+                <a href="#0">
+                  {{ i.title }}
+                  <span>{{ i.descriptions }}</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
 
         </div> <!-- grid-list-items -->
 

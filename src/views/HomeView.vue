@@ -2,7 +2,7 @@
 import LandingPageHeader from '../components/landing/header.vue'
 import LandingPageInto from '../components/landing/intro.vue'
 import AboutView from '../components/About.vue'
-import WorkView from '../components/Work.vue'
+// import WorkView from '../components/Work.vue'
 import ContactView from '../components/Contact.vue'
 import NumbersView from '../components/Numbers.vue'
 
@@ -12,26 +12,28 @@ import { useCounterStore } from '../stores/landing'
 const store = useCounterStore()
 
 
-const targets = {
-  intro: (state: boolean) => {
+const targets: { [key: string]: any } = {
+  intro: (state: boolean): void => {
+    console.log("0", state)
     if (state) {
       store.currentSection = 0
+    } else {
+      store.currentSection = 1
     }
 
   },
-  about: (state: boolean) => {
+  about: (state: boolean): void => {
+    console.log("1", state)
     if (state) {
       store.currentSection = 1
     }
   },
-  work: (state: boolean) => {
+  contact: (state: boolean): void => {
+    console.log("2", state)
     if (state) {
       store.currentSection = 2
-    }
-  },
-  contact: (state: boolean) => {
-    if (state) {
-      store.currentSection = 3
+    } else {
+      store.currentSection = 1
     }
   },
 }
@@ -48,27 +50,16 @@ const targets = {
 
       <LandingPageHeader />
 
-      <div v-element-visibility="[targets.intro]">
+      <div v-element-visibility="targets.intro">
         <LandingPageInto />
       </div>
-      <div v-element-visibility="[targets.about]">
-        <AboutView />
-      </div>
-      <div v-element-visibility="[targets.work]">
-        <WorkView />
+      <div v-element-visibility="targets.about">
+        <AboutView count="1" />
       </div>
       <NumbersView />
-      <div v-element-visibility="[targets.contact]">
-        <ContactView />
+      <div v-element-visibility="targets.contact">
+        <ContactView count="2" />
       </div>
-
-
-
-
-
-
-
-
 
     </div> <!-- end page-wrap -->
     <!-- <TheWelcome /> -->

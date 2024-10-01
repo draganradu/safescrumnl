@@ -19,6 +19,7 @@
     "@vueuse/components": "^11.1.0",
     "@vueuse/core": "^11.1.0",
     "bootstrap-icons": "^1.11.3",
+    "firebase": "^10.14.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"

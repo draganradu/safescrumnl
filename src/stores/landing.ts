@@ -14,8 +14,12 @@ export const useCounterStore = defineStore('counter', () => {
           what: 'Scrum Master'
         },
         {
-          where: 'Dropbox',
-          what: 'Product Designer'
+          where: 'Meditools',
+          what: 'Scrum Master'
+        },
+        {
+          where: 'Verifone',
+          what: 'Scrum Master'
         }
       ],
       awards: [
@@ -24,18 +28,39 @@ export const useCounterStore = defineStore('counter', () => {
           what: 'Speaker'
         }
       ],
+      services: [
+        {
+          title: 'Scrum Master',
+          descriptions:
+            'Fosters collaboration, removes obstacles, and ensures Agile principles are followed for team success.'
+        },
+        {
+          title: 'Just in time Transformation',
+          descriptions:
+            'Optimizes processes, minimizes waste, and delivers value by aligning resources efficiently.'
+        },
+        {
+          title: 'Agile Coach',
+          descriptions:
+            'Empowers teams, fosters continuous improvement, and guides the adoption of Agile practices for success.'
+        }
+      ],
       skills: [
-        'Product Design',
-        'UI/UX Design',
+        'Scrum Master',
+        'Problem solving',
+        'Development thinking',
         'Prototyping',
-        'Frontend Development',
-        'Illustration',
-        'Visual Design'
+        'CI/CD Development',
+        'Product lifecycle management'
       ]
     },
-    work: {},
+    // work: {},
     contact: {
-      email: 'radu.dragan@vinylducky.nl'
+      email: 'radu.dragan@vinylducky.nl',
+      phone: '0648459980',
+      KVK: '88701778',
+      VAT: 'NL004641406B81',
+      IBAN: 'NL02KNAB0606447458'
     }
   }
   const socialMedia = {

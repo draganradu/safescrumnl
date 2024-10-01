@@ -24,7 +24,7 @@ const { socialMedia } = store
 
           <div class="s-intro__content-btns">
             <a class="smoothscroll btn" href="#about">More About Me</a>
-            <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
+            <a class="smoothscroll btn btn--stroke" href="#contact">Get In Touch</a>
           </div> <!-- s-intro__content-btns -->
 
         </div> <!-- s-intro__content-text -->
