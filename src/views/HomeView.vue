@@ -14,7 +14,6 @@ const store = useCounterStore()
 
 const targets: { [key: string]: any } = {
   intro: (state: boolean): void => {
-    console.log("0", state)
     if (state) {
       store.currentSection = 0
     } else {
@@ -23,13 +22,11 @@ const targets: { [key: string]: any } = {
 
   },
   about: (state: boolean): void => {
-    console.log("1", state)
     if (state) {
       store.currentSection = 1
     }
   },
   contact: (state: boolean): void => {
-    console.log("2", state)
     if (state) {
       store.currentSection = 2
     } else {
